@@ -5,7 +5,7 @@ import json
 import sys
 cmd=str(sys.argv[1])
 app = Flask(__name__)
-g = Github("praneethadevireddy1595@gmail.com","Devi1995")
+g = Github("praneethadevireddy1595@gmail.com","*******")
 cmd=cmd.split("/")
 value=cmd[len(cmd)-1]
 user = g.get_user()
