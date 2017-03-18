@@ -5,10 +5,10 @@ import json
 import sys
 cmd=str(sys.argv[1])
 app = Flask(__name__)
-g = Github("praneethadevireddy1595@gmail.com","*******")
+g = Github()
 cmd=cmd.split("/")
 value=cmd[len(cmd)-1]
-user = g.get_user()
+user = g.get_user(cmd[len(cmd)-2])
 repo = user.get_repo(value)
 @app.route("/")
 def hello():
